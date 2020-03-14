@@ -67,18 +67,22 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int j;
 
-	fmt tipos{
-		"c", fun_char;
-		"s", fun_string;
-		"%", fun_percent;
-		"d", fun_decimal;
-		"i", fun_integer;
+	fmt tipos []{
+		{"c", fun_char};
+		{"s", fun_string};
+		{"%", fun_percent};
+		{"d", fun_decimal};
+		{"i", fun_integer};
 		{NULL, NULL};
 	};
 
 	while (format && format[i])
 	{
 		j = 0;
-		while ()
+		while (*tipos[j])
+		{
+			if (format[i] == *tipos[j].z)
+				/*tipos[j].*fun); */
+		}
 	}
 }
