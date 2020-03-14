@@ -5,10 +5,11 @@
  * @ls:va_list
  * Return: void
  */
-void fun_char(va_list ls)
+int fun_char(va_list ls)
 {
 	int variable = va_arg(ls, int);
-	_putchar(variable);
+	return (_putchar(variable));
+
 }
 
 /**
@@ -16,45 +17,47 @@ void fun_char(va_list ls)
  * @ls:va_list
  * Return: void
  */
-void fun_string(va_list ls)
+/*int fun_string(va_list ls)
 {
         int variable = va_arg(ls, char*);
         _putchar(variable);
 }
-
+*/
 /**
  * fun_percent - prints ??
  * @ls:va_list
  * Return: void
  */
-void fun_percent(va_list ls)
+/*int fun_percent(va_list ls)
 {
-        int variable = va_arg(ls, /* */);
+        int variable = va_arg(ls, );
         _putchar(variable);
 }
-
+*/
 /**
  * fm_decimal - prints decimal
  * @ls:va_list
  * Return: void
  */
-void fun_decimal(va_list ls)
+/*
+int fun_decimal(va_list ls)
 {
         int variable = va_arg(ls, int);
         _putchar(variable);
 }
-
+*/
 /**
  * fun_integer - prints integer.
  * @ls:va_list
  * Return: void
  */
-void fun_integer(va_list ls)
+/*
+int fun_integer(va_list ls)
 {
         int variable = va_arg(ls, int);
         _putchar(variable);
 }
-
+*/
 
 /**
  * _printf - Prints anything.
