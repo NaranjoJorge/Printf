@@ -8,8 +8,7 @@
 int _printf(const char *format, ...);
 
 /**
- * struct formato - Struct op
- *
+ * struct formato -
  * @z: char*
  * @(*fun):
  */
