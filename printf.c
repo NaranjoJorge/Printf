@@ -1,30 +1,55 @@
 #include "holberton.h"
 
-int fun_char(va_list ls)
+/**
+ * fun_char - prints char
+ * @ls:va_list
+ * Return: void
+ */
+void fun_char(va_list ls)
 {
 	int variable = va_arg(ls, int);
 	_putchar(variable);
 }
 
-int fun_char(va_list ls)
+/**
+ * fun_string - prints string.
+ * @ls:va_list
+ * Return: void
+ */
+void fun_string(va_list ls)
+{
+        int variable = va_arg(ls, char*);
+        _putchar(variable);
+}
+
+/**
+ * fun_percent - prints ??
+ * @ls:va_list
+ * Return: void
+ */
+void fun_percent(va_list ls)
+{
+        int variable = va_arg(ls, /* */);
+        _putchar(variable);
+}
+
+/**
+ * fm_decimal - prints decimal
+ * @ls:va_list
+ * Return: void
+ */
+void fun_decimal(va_list ls)
 {
         int variable = va_arg(ls, int);
         _putchar(variable);
 }
 
-int fun_char(va_list ls)
-{
-        int variable = va_arg(ls, int);
-        _putchar(variable);
-}
-
-int fun_char(va_list ls)
-{
-        int variable = va_arg(ls, int);
-        _putchar(variable);
-}
-
-int fun_char(va_list ls)
+/**
+ * fun_integer - prints integer.
+ * @ls:va_list
+ * Return: void
+ */
+void fun_integer(va_list ls)
 {
         int variable = va_arg(ls, int);
         _putchar(variable);
@@ -39,6 +64,8 @@ int fun_char(va_list ls)
 
 int _printf(const char *format, ...)
 {
+	int i = 0;
+	int j;
 
 	fmt tipos{
 		"c", fun_char;
@@ -48,4 +75,10 @@ int _printf(const char *format, ...)
 		"i", fun_integer;
 		{NULL, NULL};
 	};
+
+	while (format && format[i])
+	{
+		j = 0;
+		while ()
+	}
 }
