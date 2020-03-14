@@ -12,6 +12,7 @@ int _printf(const char *format, ...);
  * @z: char*
  * @(*fun):
  */
+
 typedef struct formato{
 	char *z;
 	void (*fun)(va_list);
