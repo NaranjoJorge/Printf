@@ -6,19 +6,19 @@
  *
  * Return: function that recives a va_list and return and int
  */
-int (*get_func(char *s))(va_list)
+int (*get_func(const char *s))(va_list)
 {
+	unsigned int j = 0;
 	fmt tipos[] = {
 		{"c", fun_char},
 		{"s", fun_string},
 		{"%", fun_per},
 		{NULL, NULL}
 	};
-	int j = 0;
 
-	while(tipos[j].z != NULL)
+	while (tipos[j].z != NULL)
 	{
-		if (s && *s == *tipos[j].z )
+		if (*s == *tipos[j].z)
 		{
 			return (tipos[j].fun);
 		}

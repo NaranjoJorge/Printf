@@ -35,5 +35,6 @@ int fun_string(va_list s)
  */
 int fun_per(va_list c)
 {
+	UNUSED(c);
 	return (_putchar('%'));
 }

@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
+#define UNUSED(x) (void)(x)
 
 int _printf(const char *format, ...);
 
@@ -15,7 +17,7 @@ int _printf(const char *format, ...);
 
 typedef struct formato{
 	char *z;
-	void (*fun)(va_list);
+	int (*fun)(va_list);
 } fmt;
 int _printf(const char *format, ...);
 int _putchar(char c);

@@ -10,8 +10,8 @@
 int main(void)
 {
 	_printf("hola mundo\n");
-	_ptintf("hola caracter %c aa", 'A');
-	_printf("hola %s", "santiago");
-	_printf("hola porcentaje %%");
+	_printf("hola caracter %c aa\n", 'A');
+	_printf("hola %s", "santiago\n");
+	_printf("hola porcentaje %%\n");
 	return (0);
 }
