@@ -5,9 +5,9 @@
  * @ls:va_list
  * Return: void
  */
-int fun_char(va_list ls)
+int fun_char(va_list list)
 {
-	int variable = va_arg(ls, int);
+	int variable = va_arg(list, int);
 	return (_putchar(variable));
 
 }
@@ -17,9 +17,9 @@ int fun_char(va_list ls)
  * @ls:va_list
  * Return: void
  */
-/*int fun_string(va_list ls)
+/*int fun_string(va_list list)
 {
-        int variable = va_arg(ls, char*);
+        int variable = va_arg(list, char*);
         _putchar(variable);
 }
 */
@@ -28,9 +28,9 @@ int fun_char(va_list ls)
  * @ls:va_list
  * Return: void
  */
-/*int fun_percent(va_list ls)
+/*int fun_percent(va_list list)
 {
-        int variable = va_arg(ls, );
+        int variable = va_arg(list, );
         _putchar(variable);
 }
 */
@@ -40,9 +40,9 @@ int fun_char(va_list ls)
  * Return: void
  */
 /*
-int fun_decimal(va_list ls)
+int fun_decimal(va_list list)
 {
-        int variable = va_arg(ls, int);
+        int variable = va_arg(list, int);
         _putchar(variable);
 }
 */
@@ -52,9 +52,9 @@ int fun_decimal(va_list ls)
  * Return: void
  */
 /*
-int fun_integer(va_list ls)
+int fun_integer(va_list list)
 {
-        int variable = va_arg(ls, int);
+        int variable = va_arg(list, int);
         _putchar(variable);
 }
 */
@@ -68,7 +68,11 @@ int fun_integer(va_list ls)
 int _printf(const char *format, ...)
 {
 	int i = 0;
+	int counter = 0;
 	int j;
+	va_list list;
+
+	va_start (list, format);
 
 	fmt tipos []{
 		{"c", fun_char};
@@ -82,10 +86,9 @@ int _printf(const char *format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		while (*tipos[j])
+		while ((format[i] != "%") && (format[i + 1] != t*ipos[j].z))
 		{
-			if (format[i] == *tipos[j].z)
-				/*tipos[j].*fun); */
+			counter += _putchar(format[i]);
 		}
 	}
 }
