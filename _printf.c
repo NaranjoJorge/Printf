@@ -13,6 +13,8 @@ int (*get_func(const char *s))(va_list)
 		{"c", fun_char},
 		{"s", fun_string},
 		{"%", fun_per},
+		{"i", fun_int},
+		{"d", fun_dec},
 		{NULL, NULL}
 	};
 

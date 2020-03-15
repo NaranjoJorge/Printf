@@ -15,10 +15,12 @@ int _printf(const char *format, ...);
  * @fun: function that print the format
  */
 
-typedef struct formato{
+typedef struct formato
+{
 	char *z;
 	int (*fun)(va_list);
 } fmt;
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int fun_char(va_list c);
