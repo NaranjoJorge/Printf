@@ -14,8 +14,8 @@ int _printf(const char *format, ...);
  */
 typedef struct formato
 {
-        char *z;
-        int (*fun)(va_list);
+	char *z;
+	int (*fun)(va_list);
 } fmt;
 int _printf(const char *format, ...);
 int _putchar(char c);
