@@ -22,6 +22,8 @@ int fun_string(va_list s)
 	int count = 0, i;
 	char *string = va_arg(s, char *);
 
+	if (string == NULL)
+		return (write(1, "(null)", 6));
 	for (i = 0;  string[i]; i++)
 		count += _putchar(string[i]);
 	return (count);
