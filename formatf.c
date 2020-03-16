@@ -46,10 +46,12 @@ int fun_per(va_list c)
 int fun_int(va_list i)
 {
 	int digits[10];
-	int j, teens, num, sum, count = 0;
+	int j, teens, num, sum, count;
 
 	num = va_arg(i, int);
+	count = 0;
 	teens = 1000000000;
+	digits[0] = num / teens;
 	for (j = 1; j < 10; j++)
 	{
 		teens /= 10;
@@ -57,7 +59,8 @@ int fun_int(va_list i)
 	}
 	if (num < 0)
 	{
-		count += _putchar('-');
+		_putchar('-');
+		count++;
 		for (j = 0; j < 10; j++)
 			digits[j] *= -1;
 	}
@@ -65,7 +68,11 @@ int fun_int(va_list i)
 	{
 		sum += digits[j];
 		if (sum != 0 || j == 9)
-			count += _putchar(digits[j] + '0');
+		{
+			_putchar(digits[j] + '0');
+			count++;
+		}
+
 	}
 	return (count);
 }
@@ -78,9 +85,10 @@ int fun_int(va_list i)
 int fun_dec(va_list d)
 {
 	int digits[10];
-	int j, teens, num, sum, count = 0;
+	int j, teens, num, sum, count;
 
 	num = va_arg(d, int);
+	count = 0;
 	teens = 1000000000;
 	digits[0] = num / teens;
 	for (j = 1; j < 10; j++)
@@ -90,7 +98,8 @@ int fun_dec(va_list d)
 	}
 	if (num < 0)
 	{
-		count += _putchar('-');
+		_putchar('-');
+		count++;
 		for (j = 0; j < 10; j++)
 			digits[j] *= -1;
 	}
@@ -98,7 +107,11 @@ int fun_dec(va_list d)
 	{
 		sum += digits[j];
 		if (sum != 0 || j == 9)
-			count += _putchar(digits[j] + '0');
+		{
+			_putchar(digits[j] + '0');
+			count++;
+		}
+
 	}
 	return (count);
 }
