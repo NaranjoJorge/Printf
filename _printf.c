@@ -43,7 +43,11 @@ int _printf(const char *format, ...)
 	va_list list;
 	int (*f)(va_list);
 
+	if (format == NULL)
+		return (-1);
 	va_start(list, format);
+	if (list == NULL)
+		return (-1);
 	while (format && format[i])
 	{
 		if (format[i] && format[i] != '%')
