@@ -63,7 +63,7 @@ int fun_int(va_list i)
 	for (j = 0, sum = 0; j < 10; j++)
 	{
 		sum += digits[j];
-		if (digits[j] != 0 || j == 9)
+		if (sum != 0 || j == 9)
 			count += _putchar(digits[j] + '0');
 	}
 	return (count);
@@ -94,7 +94,7 @@ int fun_dec(va_list d)
 	for (j = 0, sum = 0; j < 10; j++)
 	{
 		sum += digits[j];
-		if (digits[j] != 0 || j == 9)
+		if (sum != 0 || j == 9)
 			count += _putchar(digits[j] + '0');
 	}
 	return (count);

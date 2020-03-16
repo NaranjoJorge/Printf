@@ -26,4 +26,6 @@ int fun_int(va_list i);
 int fun_dec(va_list d);
 int fun_bin(va_list b);
 int fun_uns(va_list u);
+int fun_oct(va_list o);
+
 #endif

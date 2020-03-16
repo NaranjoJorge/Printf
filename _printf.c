@@ -16,6 +16,7 @@ int (*get_func(const char *s))(va_list)
 		{"d", fun_dec},
 		{"b", fun_bin},
 		{"u", fun_uns},
+		{"o", fun_oct},
 		{NULL, NULL}
 	};
 	while (tipos[j].z != NULL)

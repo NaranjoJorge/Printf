@@ -49,7 +49,34 @@ int fun_uns(va_list u)
 	for (j = 0, sum = 0; j < 10; j++)
 	{
 		sum += digits[j];
-		if (digits[j] != 0 || j == 9)
+		if (sum != 0 || j == 9)
+			count += _putchar(digits[j] + '0');
+	}
+	return (count);
+}
+
+/**
+ * fun_oct - function that prints octal numbers
+ * @o: va_list o
+ *
+ * Return: number of chars
+ */
+int fun_oct(va_list o)
+{
+	unsigned int digits[11];
+	unsigned int j, max, num, sum, count = 0;
+
+	num = va_arg(o, int);
+	max = 1073741824;
+	for (j = 0; j < 11; j++)
+	{
+		digits[j] = (num / max) % 8;
+		max /= 8;
+	}
+	for (j = 0, sum = 0; j < 11; j++)
+	{
+		sum += digits[j];
+		if (sum != 0 || j == 10)
 			count += _putchar(digits[j] + '0');
 	}
 	return (count);
