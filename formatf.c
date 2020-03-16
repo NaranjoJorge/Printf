@@ -50,16 +50,16 @@ int fun_int(va_list i)
 
 	num = va_arg(i, int);
 	teens = 1000000000;
-	if (num < 0)
-	{
-		count += _putchar('-');
-		num *= -1;
-	}
-	digits[0] = num / teens;
 	for (j = 1; j < 10; j++)
 	{
 		teens /= 10;
 		digits[j] = (num / teens) % 10;
+	}
+	if (num < 0)
+	{
+		count += _putchar('-');
+		for (j = 0; j < 10; j++)
+			a[j] *= -1;
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
@@ -82,16 +82,17 @@ int fun_dec(va_list d)
 
 	num = va_arg(d, int);
 	teens = 1000000000;
-	if (num < 0)
-	{
-		count += _putchar('-');
-		num *= -1;
-	}
 	digits[0] = num / teens;
 	for (j = 1; j < 10; j++)
 	{
 		teens /= 10;
 		digits[j] = (num / teens) % 10;
+	}
+	if (num < 0)
+	{
+		count += _putchar('-');
+		for (j = 0; j < 10; j++)
+			a[j] *= -1;
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
