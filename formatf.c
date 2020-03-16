@@ -1,4 +1,4 @@
-#include "holberton.h"
+nclude "holberton.h"
 /**
  * fun_char - function that prints chars
  * @c: va_list with the char to print
