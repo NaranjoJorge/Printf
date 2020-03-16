@@ -55,10 +55,11 @@ int fun_int(va_list i)
 		count += _putchar('-');
 		num *= -1;
 	}
-	for (j = 0; j < 10; j++)
+	digits[0] = num / teens;
+	for (j = 1; j < 10; j++)
 	{
-		digits[j] = (num / teens) % 10;
 		teens /= 10;
+		digits[j] = (num / teens) % 10;
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
@@ -86,10 +87,11 @@ int fun_dec(va_list d)
 		count += _putchar('-');
 		num *= -1;
 	}
-	for (j = 0; j < 10; j++)
+	digits[0] = num / teens;
+	for (j = 1; j < 10; j++)
 	{
-		digits[j] = (num / teens) % 10;
 		teens /= 10;
+		digits[j] = (num / teens) % 10;
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
