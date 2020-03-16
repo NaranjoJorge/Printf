@@ -14,7 +14,9 @@ int (*get_func(const char *s))(va_list)
 		{"s", fun_string},
 		{"%", fun_per},
 		{"i", fun_int},
-		{"d", fun_dec},
+		{"d", fun_int},
+		{"b", fun_bin},
+		{"u", fun_uns},
 		{NULL, NULL}
 	};
 

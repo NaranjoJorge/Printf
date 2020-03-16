@@ -26,5 +26,9 @@ int _putchar(char c);
 int fun_char(va_list c);
 int fun_string(va_list s);
 int fun_per(va_list c);
+int fun_int(va_list i);
+int fun_int(va_list i);
+int fun_bin(va_list b);
+int fun_uns(va_list u);
 
 #endif

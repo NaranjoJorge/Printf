@@ -43,13 +43,33 @@ int fun_per(va_list c)
  * fun_int - function that prints integer
  * @i: va_list i
  *
- * Return: number of
+ * Return: number of chars
  */
 int fun_int(va_list i)
 {
-	int count = 0, i;
+	int digits[10];
+	int j, teens, num, sum, count = 0;
 
-	/*char * */
+	num = va_arg(i, int);
+	teens = 1000000000;
+	digits[0] = num / teens;
+	for (j = 1; j < 10; j++)
+	{
+		teens /= 10;
+		digits[j] = (num / teens) % 10;
 
-	/*va_arg(i, );*/
+	}
+	if (num < 0)
+	{
+		count += _putchar('-');
+		for (j = 0; j < 10; j++)
+			digits[j] *= -1;
+	}
+	for (j = 0, sum = 0; j < 10; j++)
+	{
+		sum += digits[j];
+		if (digits[j] != 0 || j == 9)
+			count += _putchar(digits[j] + '0');
+	}
+	return (count);
 }
