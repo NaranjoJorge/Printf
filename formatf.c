@@ -59,7 +59,7 @@ int fun_int(va_list i)
 	{
 		count += _putchar('-');
 		for (j = 0; j < 10; j++)
-			a[j] *= -1;
+			digits[j] *= -1;
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
@@ -92,7 +92,7 @@ int fun_dec(va_list d)
 	{
 		count += _putchar('-');
 		for (j = 0; j < 10; j++)
-			a[j] *= -1;
+			digits[j] *= -1;
 	}
 	for (j = 0, sum = 0; j < 10; j++)
 	{
