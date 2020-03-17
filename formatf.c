@@ -51,10 +51,11 @@ int fun_int(va_list i)
 	num = va_arg(i, int);
 	count = 0;
 	teens = 1000000000;
+	digits[0] = num / teens;
 	for (j = 0; j < 10; j++)
 	{
-		digits[j] = (num / teens) % 10;
 		teens /= 10;
+		digits[j] = (num / teens) % 10;
 	}
 	if (num < 0)
 	{
@@ -87,10 +88,11 @@ int fun_dec(va_list d)
 	num = va_arg(d, int);
 	count = 0;
 	teens = 1000000000;
-	for (j = 0; j < 10; j++)
+	digits[0] = num / teens;
+	for (j = 1; j < 10; j++)
 	{
-		digits[j] = (num / teens) % 10;
 		teens /= 10;
+		digits[j] = (num / teens) % 10;
 	}
 	if (num < 0)
 	{
