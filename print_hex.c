@@ -65,7 +65,7 @@ int fun_heX(va_list x)
 }
 /**
  * fun_adr - print an adress
- * @x: valist with argument
+ * @p: valist with argument
  *
  * Return: number of printed chars
  */
