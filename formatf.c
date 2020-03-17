@@ -52,7 +52,7 @@ int fun_int(va_list i)
 	count = 0;
 	teens = 1000000000;
 	digits[0] = num / teens;
-	for (j = 0; j < 10; j++)
+	for (j = 1; j < 10; j++)
 	{
 		teens /= 10;
 		digits[j] = (num / teens) % 10;
