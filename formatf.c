@@ -94,7 +94,7 @@ int fun_dec(va_list d)
 	}
 	if (num < 0)
 	{
-		cout = _putchar('-');
+		count = _putchar('-');
 		for (j = 0; j < 10; j++)
 			digits[j] *= -1;
 	}
