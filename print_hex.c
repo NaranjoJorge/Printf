@@ -1,0 +1,65 @@
+#include "holberton.h"
+/**
+ * fun_hex - print hexadecimal in lowercase
+ * @x: valist with argument
+ *
+ * Return: number of printed chars
+ */
+int fun_hex(va_list x)
+{
+	unsigned int num, max, i, sum;
+	unsigned int digits[8];
+	int count;
+
+	num = va_arg(x, unsigned int);
+	max = 268435456;
+	for (i = 0; i < 8; i++)
+	{
+		digits[i] = (num / max) % 16;
+		max /= 16;
+	}
+	for (i = 0, sum = 0, count = 0; i < 8; i++)
+	{
+		sum += digits[i];
+		if (sum || i == 7)
+		{
+			if (digits[i] < 10)
+				count += _putchar(digits[i] + '0');
+			else
+				count += _putchar(39 + digits[i] + '0');
+		}
+	}
+	return (count);
+}
+/**
+ * fun_heX - print hexadecimal in uppercase
+ * @x: valist with argument
+ *
+ * Return: number of printed chars
+ */
+int fun_heX(va_list x)
+{
+	unsigned int num, max, i, sum;
+	unsigned int digits[8];
+	int count;
+
+	num = va_arg(x, unsigned int);
+	max = 268435456;
+	for (i = 0; i < 8; i++)
+	{
+		digits[i] = (num / max) % 16;
+		max /= 16;
+	}
+	for (i = 0, sum = 0, count = 0; i < 8; i++)
+	{
+		sum += digits[i];
+		if (sum || i == 7)
+		{
+			if (digits[i] < 10)
+				count += _putchar(digits[i] + '0');
+			else
+				count += _putchar(7 + digits[i] + '0');
+		}
+	}
+	return (count);
+}
