@@ -29,5 +29,6 @@ int fun_uns(va_list u);
 int fun_oct(va_list o);
 int fun_hex(va_list x);
 int fun_heX(va_list x);
+int fun_adr(va_list p);
 
 #endif
