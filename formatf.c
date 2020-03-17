@@ -59,7 +59,8 @@ int fun_int(va_list i)
 	}
 	if (num < 0)
 	{
-		count = _putchar('-');
+		_putchar('-');
+		count++;
 		for (j = 0; j < 10; j++)
 			digits[j] *= -1;
 	}
@@ -68,7 +69,8 @@ int fun_int(va_list i)
 		sum += digits[j];
 		if (sum != 0 || j == 9)
 		{
-			count = _putchar(digits[j] + '0');
+			_putchar(digits[j] + '0');
+			count++;
 		}
 
 	}
@@ -96,7 +98,8 @@ int fun_dec(va_list d)
 	}
 	if (num < 0)
 	{
-		count = _putchar('-');
+		_putchar('-');
+		count++;
 		for (j = 0; j < 10; j++)
 			digits[j] *= -1;
 	}
@@ -105,7 +108,8 @@ int fun_dec(va_list d)
 		sum += digits[j];
 		if (sum != 0 || j == 9)
 		{
-			count = _putchar(digits[j] + '0');
+			_putchar(digits[j] + '0');
+			count++;
 		}
 
 	}
