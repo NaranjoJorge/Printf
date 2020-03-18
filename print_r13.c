@@ -25,6 +25,17 @@ int fun_r13(va_list str)
 				count++;
 				break;
 			}
+			else if (s[i] == n[j])
+			{
+				_putchar(l[j]);
+				count++;
+				break;
+			}
+		}
+		if (j > s[i])
+		{
+		_putchar(s[i]);
+		count++;
 		}
 	}
 	return (count);
