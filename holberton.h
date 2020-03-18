@@ -30,5 +30,6 @@ int fun_oct(va_list o);
 int fun_hex(va_list x);
 int fun_heX(va_list x);
 int fun_adr(va_list p);
+int fun_rev(va_list str);
 
 #endif
