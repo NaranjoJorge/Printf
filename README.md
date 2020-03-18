@@ -20,7 +20,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c
 [Betty](https://github.com/holbertonschool/Betty/wiki)
 
 ## Flow Chart
-![flow chart](images/Untitled Diagram.png)
+![flow chart](test/flowchart.png)
 
 ## Authors
 
