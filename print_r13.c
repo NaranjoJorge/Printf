@@ -14,16 +14,7 @@ int fun_r13(va_list str)
 	char *s;
 
 	s = va_arg(str, char*);
-	if (s == NULL)
-	{
-		s = "(null)";
-		for (i = 0; s[i]; i++)
-		{
-			_putchar(s[i]);
-			count++;
-		}
-		return (count);
-	}
+	count = 0;
 	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; j <= 51; j++)
