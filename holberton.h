@@ -31,5 +31,6 @@ int fun_hex(va_list x);
 int fun_heX(va_list x);
 int fun_adr(va_list p);
 int fun_rev(va_list str);
+int fun_r13(va_list str);
 
 #endif
