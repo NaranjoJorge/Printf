@@ -32,7 +32,7 @@ int fun_r13(va_list str)
 				break;
 			}
 		}
-		if (j > s[i])
+		if (j > 51)
 		{
 		_putchar(s[i]);
 		count++;
